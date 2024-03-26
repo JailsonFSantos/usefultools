@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Styles.module.css';
 
+// Manutencao
 function resetForm() {
   document.getElementById("inputForm").reset();
 

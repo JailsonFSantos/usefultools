@@ -22,7 +22,6 @@ export default function HomeTools() {
         <ul className={styles.navLinks}> 
           <li><Link href="/MacPage">Mac</Link></li>
           <li><Link href="/PasswordPage">Senhas</Link></li>
-          <li><Link href="/OnboardingPage">Onboarding</Link></li>
         </ul>
       </nav>
       <div>

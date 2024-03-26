@@ -39,7 +39,6 @@ export default function MacPage() {
         <ul className={styles.navLinks}> {/* Use uma lista para os links da barra de navegação */}
         <li><Link href="/MacPage">Mac</Link></li>
         <li><Link href="/PasswordPage">Senhas</Link></li>
-        <li><Link href="/OnboardingPage">Onboarding</Link></li>
         <li><Link href="/">Inicio</Link></li>
         </ul>
         </div>

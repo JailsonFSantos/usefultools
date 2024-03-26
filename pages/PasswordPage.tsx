@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Styles.module.css';
 
-function generatePassword(length, includeUppercase, includeNumbers, includeSymbols) {
+function generatePassword(length: number, includeUppercase: boolean, includeNumbers: boolean, includeSymbols: boolean) {
   let charset = 'abcdefghijklmnopqrstuvwxyz';
   let password = '';
   
@@ -13,13 +13,14 @@ function generatePassword(length, includeUppercase, includeNumbers, includeSymbo
     charset += '0123456789';
   }
   if (includeSymbols) {
-    charset += '!@#$%^&*()-_+=';
+    charset += '!@#$%^&*()-_=+[]{}|;:,.<>?';
   }
-  
+
   for (let i = 0; i < length; i++) {
-    password += charset.charAt(Math.floor(Math.random() * charset.length));
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset[randomIndex];
   }
-  
+
   return password;
 }
 
@@ -43,7 +44,6 @@ export default function PasswordPage() {
         <ul className={styles.navLinks}> {/* Use uma lista para os links da barra de navegação */}
         <li><Link href="/MacPage">Mac</Link></li>
         <li><Link href="/PasswordPage">Senhas</Link></li>
-        <li><Link href="/OnboardingPage">Onboarding</Link></li>
         <li><Link href="/">Inicio</Link></li>
       </ul>
         </div>
