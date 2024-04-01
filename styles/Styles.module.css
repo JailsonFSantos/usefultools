@@ -183,3 +183,7 @@
 .card a:hover {
   text-decoration: underline;
 }
+.checkboxContainer input[type="checkbox"] {
+  transform: scale(2); 
+  margin-right: 8px; 
+}
